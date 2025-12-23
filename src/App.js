@@ -3,6 +3,7 @@ import Layout from "./layout/Layout"
 import MainPage from "./pages/MainPage"
 import ProductPage from "./pages/ProductPage"
 import CartPage from "./pages/CartPage"
+import DetailPage from "./pages/DetailPage"
 import "../src/assets/scss/global.scss"
 
 const App = () => {
@@ -13,6 +14,7 @@ const App = () => {
           <Route path="/" element={<MainPage />} />
           <Route path="/product" element={<ProductPage />} />
           <Route path="/cart" element={<CartPage />} />
+          <Route path="/detail/:id" element={<DetailPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

@@ -1,0 +1,58 @@
+[
+  {
+    "id": "cloud",
+    "title": "CLOUD",
+    "price": 1245000,
+    "description": "부클 텍스처의 촉감과 시각적 따뜻함이 공간에 깊이를 더함",
+    "model3D": "Cloud_glb"
+  },
+  {
+    "id": "velora",
+    "title": "VELORA",
+    "price": 1320000,
+    "description": "묵직한 착좌감과 안정적인 프레임으로 휴식에 최적화",
+    "model3D": "Velora_glb"
+  },
+  {
+    "id": "retro-current",
+    "title": "RETRO CURRENT",
+    "price": 1180000,
+    "description": "단단한 구조감과 정제된 비례로 깔끔한 공간 연출",
+    "model3D": "RETRO_CURRENT_glb"
+  },
+  {
+    "id": "veil",
+    "title": "VEIL",
+    "price": 1090000,
+    "description": "둥글게 감싸는 형태로 부드럽고 편안한 인상 전달",
+    "model3D": "Veil_glb"
+  },
+  {
+    "id": "midnight",
+    "title": "MIDNIGHT",
+    "price": 1390000,
+    "description": "풍부한 볼륨과 유연한 가죽 주름으로 편안함을 직관적으로 전달",
+    "model3D": "Midnight_glb"
+  },
+  {
+    "id": "chrome-haven",
+    "title": "CHROME HAVEN",
+    "price": 1245000,
+    "description": "금속 프레임과 쿠션의 대비로 시선을 사로잡는 라운지 체어",
+    "model3D": "CHROME_HAVEN_glb"
+  },
+  {
+    "id": "moss",
+    "title": "MOSS",
+    "price": 1150000,
+    "description": "수평과 수직의 조합으로 공간을 정돈하는 구조적 설계",
+    "model3D": "Moss_glb"
+  },
+  {
+    "id": "still",
+    "title": "STILL",
+    "price": 1210000,
+    "description": "인체 곡선을 고려한 각도로 장시간 착석에도 편안함 유지",
+    "model3D": "Still_glb"
+  }
+]

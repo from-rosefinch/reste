@@ -1,12 +1,12 @@
 import React from "react";
-import TopImg from "../section/detail/TopImg";
 import RemoveImg from "../section/detail/RemoveImg";
 import DetailContents from "../section/detail/DetailContents";
+import TopImgDark from "../section/detail/TopImgDark";
 
 const DetailPageDark = () => {
     return (
         <div className="detail-page-dark">
-            <TopImg />
+            <TopImgDark />
             <RemoveImg />
             <DetailContents />
         </div>
