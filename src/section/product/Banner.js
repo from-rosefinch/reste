@@ -1,6 +1,7 @@
 import "./Banner.scss";
 import { useEffect, useState } from "react";
 
+
 // 이미지 불러오기
 import Chrome_03 from "../../assets/img/CHROME_HAVEN_03.png";
 import Mid_01 from "../../assets/img/Midnight_01.jpg";
@@ -22,6 +23,7 @@ const Banner = () => {
 
     return (
         <section className="banner">
+            
             <p className="txt">
                 We believe rest is a <br /> form of self-respect.
             </p>

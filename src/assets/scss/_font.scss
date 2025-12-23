@@ -1,7 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
 
-// 영문폰트 Lora
-@mixin en-big{
+@font-face {
+  font-family: "Arita Buri KR SemiBold";
+  src: url("../fonts/AritaBuriKR-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Arita Buri KR Medium";
+  src: url("../fonts/AritaBuriKR-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 영문폰트 Lora */
+@mixin en-big {
   font-family: "Lora", serif;
   font-optical-sizing: auto;
   font-weight: 500;
@@ -49,43 +65,33 @@
   font-size: 16px;
 }
 
-//한글폰트 아리따부리
+/* 한글폰트 아리따부리 */
 @mixin ko-Display {
-    font-family: 'Arita Buri KR SemiBold';
-    src: url('../fonts/AritaBuriKR-SemiBold.ttf') format('truetype');
-    font-weight: normal;
-    font-display: swap;
-    font-size: 56px;
+  font-family: "Arita Buri KR SemiBold";
+  font-weight: 600;
+  font-size: 56px;
 }
 
 @mixin ko-Heading {
-    font-family: 'Arita Buri KR SemiBold';
-    src: url('../fonts/AritaBuriKR-SemiBold.ttf') format('truetype');
-    font-weight: normal;
-    font-display: swap;
-    font-size: 40px;
+  font-family: "Arita Buri KR SemiBold";
+  font-weight: 600;
+  font-size: 40px;
 }
 
 @mixin ko-Title {
-    font-family: 'Arita Buri KR Medium';
-    src: url('../fonts/AritaBuriKR-Medium.ttf') format('truetype');
-    font-weight: normal;
-    font-display: swap;
-    font-size: 32px;
+  font-family: "Arita Buri KR Medium";
+  font-weight: 500;
+  font-size: 32px;
 }
 
 @mixin ko-Body-Large {
-    font-family: 'Arita Buri KR Medium';
-    src: url('../fonts/AritaBuriKR-SemiBold.ttf') format('truetype');
-    font-weight: normal;
-    font-display: swap;
-    font-size: 24px;
+  font-family: "Arita Buri KR Medium";
+  font-weight: 500;
+  font-size: 24px;
 }
 
 @mixin ko-Body-Medium {
-    font-family: 'Arita Buri KR Medium';
-    src: url('../fonts/AritaBuriKR-SemiBold.ttf') format('truetype');
-    font-weight: normal;
-    font-display: swap;
-    font-size: 16px;
+  font-family: "Arita Buri KR Medium";
+  font-weight: 500;
+  font-size: 16px;
 }

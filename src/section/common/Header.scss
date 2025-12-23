@@ -1,0 +1,72 @@
+@use "../../assets/scss/font" as *;
+@use "../../assets/scss/mixins" as *;
+
+#header {
+  height: 82px;
+  @include flex-layout();
+  nav {
+    width: 650px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: var(--color-100);
+    background: rgba( 255, 255, 255, 0.2 );
+    backdrop-filter: blur( 3px );
+    border: 1px solid rgba( 255, 255, 255, 0.2 );
+    box-shadow: 0 8px 32px 0 rgba( 0, 0, 0, 0.2 );
+    @include flex-layout($just: space-between);
+    .icon-sofa {
+      width: 100px;
+      height: 100%;
+      border-radius: 25px;
+      transition: 0.3s;
+      cursor: pointer;
+      @include flex-layout();
+      svg {
+        font-size: 1.5rem;
+        color: var(--color-100);
+        transition: 0.3s;
+      }
+      &:hover {
+        background-color: var(--color-100);
+        svg {
+          color: var(--color-BK);
+        }
+      }
+    }
+    .search {
+      width: 250px;
+      height: 35px;
+      background-color: var(--color-100);
+      border-radius: 17.5px;
+      @include flex-layout();
+      input {
+        border-width: 0 0 1px;
+        height: 25px;
+        padding-left: 0.5rem;
+        outline: none;
+      }
+      .icon-search {
+        cursor: pointer;
+      }
+    }
+    .icon-cart {
+      width: 100px;
+      height: 100%;
+      border-radius: 25px;
+      transition: 0.3s;
+      cursor: pointer;
+      @include flex-layout();
+      svg {
+        font-size: 1.5rem;
+        color: var(--color-100);
+      }
+      &:hover {
+        background-color: var(--color-100);
+        svg {
+          color: var(--color-BK);
+          transition: 0.3s;
+        }
+      }
+    }
+  }
+}
