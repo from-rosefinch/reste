@@ -1,7 +1,18 @@
 const MainVideo = () => {
   return (
     <section className="main-video">
-      MainVideo
+      <div className="video-wrap">
+        <video
+          src="../../Reste.webm"
+          poster="../../Reste-poster"
+          autoPlay
+          muted
+          loop
+        />
+        <img
+          src="../../Reste."
+        />
+      </div>
     </section>
   )
 }
