@@ -1,9 +1,14 @@
+import "../../section/product/ProductList.scss"
+import ProductCard from "../../components/ProductCard"
+
+
 const ProductList = () => {
   return (
     <section className="product-list">
-      <h1>Products</h1>
+      <div className="main_txt">Products</div>
+      
       <div className="item-list">
-        
+        <ProductCard />
       </div>
     </section>
   )
