@@ -1,16 +1,22 @@
+import resteVideo from "../../assets/Reste.webm";
+import restePoster from "../../assets/Reste-poster.jpg";
+import mobileVideo from "../../assets/Reste_mobile.webm";
+import mobilePoster from "../../assets/Reste_mobile_poster.jpg";
+import resteLogo from "../../assets/logo-white.png";
+import "./MainVideo.scss";
+
 const MainVideo = () => {
   return (
-    <section className="main-video">
+    <section id="main-video">
       <div className="video-wrap">
-        <video
-          src="../../Reste.webm"
-          poster="../../Reste-poster"
-          autoPlay
-          muted
-          loop
-        />
-        <img
-          src="../../Reste."
+        <video autoPlay muted loop poster={restePoster}>
+            <source 
+              src={resteVideo}
+              type="video/webm"/>
+          </video>
+        <img className="logo-img"
+          src={resteLogo}
+          alt="로고"
         />
       </div>
     </section>

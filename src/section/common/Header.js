@@ -1,6 +1,7 @@
 import { RiSofaLine } from "react-icons/ri";
 import { IoSearch } from "react-icons/io5";
 import { FiShoppingCart } from "react-icons/fi";
+import { IoIosArrowDropdown } from "react-icons/io";
 import "./Header.scss";
 
 const Header = () => {
@@ -18,6 +19,7 @@ const Header = () => {
           <FiShoppingCart className="icon" />
         </div>
       </nav>
+      <IoIosArrowDropdown />
     </div>
   )
 }
