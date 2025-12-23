@@ -1,3 +1,5 @@
+import "./RemoveImg.scss"
+
 const RemoveImg = () => {
   return (
     <section className="remove-img">

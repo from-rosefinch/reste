@@ -3,11 +3,13 @@
     "id": "cloud",
     "title": "CLOUD",
     "price": 1245000,
-    "image": "Cloud_front.png"
+    "image": "Cloud_front.png",
+    "hover" : "Cloud_04.png"
   },
   {
     "id": "velora",
     "image": "Velora_front.png",
+    "hover" : "Velora_01.png",
     "title": "VELORA",
     "price": 1320000
   },
@@ -15,36 +17,42 @@
     "id": "retro-current",
     "image": "RETRO_CURRENT_front.png",
     "title": "RETRO CURRENT",
+    "hover" : "RETRO_CURRENT_03.png",
     "price": 1180000
   },
   {
     "id": "veil",
     "image": "Veil_front.png",
     "title": "VEIL",
+    "hover" : "Veil_02.png",
     "price": 1090000
   },
   {
     "id": "midnight",
     "image": "Midnight_front.png",
     "title": "MIDNIGHT",
+    "hover" : "Midnight_05.png",
     "price": 1390000
   },
   {
     "id": "chrome-haven",
     "image": "CHROME_HAVEN_front.png",
     "title": "CHROME HAVEN",
+    "hover" : "CHROME_HAVEN_02.png",
     "price": 1245000
   },
   {
     "id": "moss",
     "image": "Moss_front.png",
     "title": "MOSS",
+    "hover" : "Moss_03.png",
     "price": 1150000
   },
   {
     "id": "Still",
     "image": "Still_front.png",
     "title": "STILL",
+    "hover" : "Still_02.png",
     "price": 1210000
   }
 ]
