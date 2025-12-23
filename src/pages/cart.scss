@@ -1,0 +1,64 @@
+@use '../assets/scss/variables.scss';
+@use '../assets/scss/font.scss' ;
+@use '../assets/scss/mixins.scss' as *;
+
+// *{padding: 0; margin: 0; box-sizing: border-box;}
+#cart-page{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    .top{
+        display: block;
+        width: 100%;
+        height: 30vh;
+        gap: 30px;
+        background-color: #F3ECE6;
+        h1{
+            padding: 3rem;
+            @include font.en-Heading;
+        }
+    }
+    .middle{
+        width: 100%;
+        height: 45vh;
+        margin: 2rem 0;
+        padding: 2rem;
+        .cart-contents{
+            @include font.en-Body-Medium();
+            .empty{
+                @include flex-layout();
+                .icon{
+                    font-size: 30px;
+                    color: red;
+                }
+            }
+            
+        }
+    }
+    
+    .buy{
+        @include flex-layout(row,space-around,center);
+        width: 100%;
+        height: 15vh;
+        background-color: #78644E;
+        color: var(--color-100);
+        div{
+            p{
+                @include font.en-Body-Medium();
+            }
+        }
+        button{
+            padding: 1rem 2rem;
+            border: 1px solid var(--color-main);
+            border-radius: 5rem;
+            @include font.ko-Body-Medium();
+            &:hover{
+                background-color: var(--color-BK);
+                border: 0.3px solid var(--color-BK);
+                color: var(--color-main);
+                box-shadow: 0 4px 4px rgba(0,0,0,25%);
+            }
+        }
+    }
+    
+}
