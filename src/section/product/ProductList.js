@@ -1,7 +1,6 @@
 import "../../section/product/ProductList.scss"
 import ProductCard from "../../components/ProductCard"
 
-
 const ProductList = () => {
   return (
     <section className="product-list">

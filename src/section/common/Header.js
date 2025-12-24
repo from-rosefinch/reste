@@ -1,23 +1,35 @@
 import { RiSofaLine } from "react-icons/ri";
 import { IoSearch } from "react-icons/io5";
 import { FiShoppingCart } from "react-icons/fi";
+import { IoIosArrowDropdown } from "react-icons/io";
 import "./Header.scss";
+import { useState } from "react";
 
 const Header = () => {
+  const [ menuDrop, setMenuDrop ] = useState(false);
+
   return (
-    <div id="header">
-      <nav>
+    <div id="header"
+      onMouseEnter={() => setMenuDrop(true)}
+      onMouseLeave={() => setMenuDrop(false)}>
+
+      <div className="icon-down">
+        <IoIosArrowDropdown />
+      </div>
+
+      <nav className={`nav ${menuDrop ? "open" : ""}`}>
         <div className="icon-sofa">
-          <RiSofaLine className="icon" />
+          <RiSofaLine />
         </div>
         <div className="search">
           <input type="text" placeholder="검색"/>
-          <IoSearch className="icon-search"/>
+          <IoSearch />
         </div>
         <div className="icon-cart">
-          <FiShoppingCart className="icon" />
+          <FiShoppingCart />
         </div>
       </nav>
+
     </div>
   )
 }

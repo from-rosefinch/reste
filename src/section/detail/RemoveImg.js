@@ -1,23 +1,4 @@
-import {useRef} from "react";
-import "./RemoveImg.scss";
-
-import chromeFront from "../../assets/img/CHROME_HAVEN_front.png";
-import chromeSide from "../../assets/img/CHROME_HAVEN_left.png";
-import chromeRight from "../../assets/img/CHROME_HAVEN_right.png"
-import chromeTop from "../../assets/img/CHROME_HAVEN_top.png";
-import chromeBack from "../../assets/img/CHROME_HAVEN_back.png";
-import chrome01 from "../../assets/img/CHROME_HAVEN_01.png";
-import chrome02 from "../../assets/img/CHROME_HAVEN_03.png";
-import chrome03 from "../../assets/img/CHROME_HAVEN_04.png";
-import chrome04 from "../../assets/img/CHROME_HAVEN_05.png";
-
-const detailCuts = [
-  { id: "front", base: chromeFront, hover: chrome01, alt: "정면" },
-  { id: "side", base: chromeSide, hover: chrome02, alt: "측면" },
-  { id: "right", base: chromeRight, hover: chrome03, alt: "우측"},
-  { id: "top", base: chromeTop, hover: chrome03, alt: "상단" },
-  { id: "back", base: chromeBack, hover: chrome04, alt: "후면" },
-];
+import "./RemoveImg.scss"
 
 const RemoveImg = () => {
   const trackRef = useRef(null);
