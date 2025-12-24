@@ -5,6 +5,7 @@ import { IoIosArrowDropdown } from "react-icons/io";
 import "./Header.scss";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import LogoHome from "../../assets/logo-black.png";
 
 const Header = () => {
   const [ menuDrop, setMenuDrop ] = useState(false);
@@ -13,26 +14,35 @@ const Header = () => {
     <div id="header"
       onMouseEnter={() => setMenuDrop(true)}
       onMouseLeave={() => setMenuDrop(false)}>
-      <div className="icon-down">
-        <IoIosArrowDropdown />
-      </div>
 
-      <nav className={`nav ${menuDrop ? "open" : ""}`}>
-          <Link to={`/product`}>
-            <div className="icon-sofa">
-              <RiSofaLine />
+      <Link to={`/`}>
+        <div className="home-logo">
+          <img src={LogoHome} alt="로고-home" />
+        </div>
+      </Link>
+
+      <div className="container">
+        <div className="icon-down">
+          <IoIosArrowDropdown />
+        </div>
+  
+        <nav className={`nav ${menuDrop ? "open" : ""}`}>
+            <Link to={`/product`}>
+              <div className="icon-sofa">
+                <RiSofaLine />
+              </div>
+            </Link>
+          <div className="search">
+            <input type="text" placeholder="검색"/>
+            <IoSearch />
+          </div>
+          <Link to={`/cart`}>
+            <div className="icon-cart">
+              <FiShoppingCart />
             </div>
           </Link>
-        <div className="search">
-          <input type="text" placeholder="검색"/>
-          <IoSearch />
-        </div>
-        <Link to={`/cart`}>
-          <div className="icon-cart">
-            <FiShoppingCart />
-          </div>
-        </Link>
-      </nav>
+        </nav>
+      </div>
 
     </div>
   )

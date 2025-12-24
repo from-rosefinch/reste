@@ -1,6 +1,5 @@
 import "./TopImg.scss";
 import gradientBg from "../../assets/img/gradient_bg.png";
-console.log("bg img =", gradientBg);
 
 const TopImg = ({ product, onBuy }) => {
     if (!product) return null;
