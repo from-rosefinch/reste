@@ -1,5 +1,6 @@
 import mdImg from "../../assets/img/Midnight_05.png";
 import "./ProductMD.scss";
+import { Link } from "react-router-dom";
 
 const ProductMD = () => {
   return (
@@ -13,7 +14,9 @@ const ProductMD = () => {
               풍부한 볼륨과 유연한 가죽 주름으로 <br />편안함을 직관적으로 전달
             </p>
             <h4>￦ 1,390,000</h4>
-            <button>구매하기</button>
+            <Link to={`/detail/midnight`}>
+              <button>구매하기</button>
+            </Link>
           </div>
         </div>
       </div>
