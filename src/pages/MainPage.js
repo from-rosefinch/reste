@@ -7,7 +7,6 @@ const MainPage = () => {
   return (
     <div id="main-page" >
       <MainVideo />
-      <DetailPage />
       <ProductMD />
       <BestItem />
       <BrandPR />
