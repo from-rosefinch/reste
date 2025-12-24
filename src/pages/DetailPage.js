@@ -17,6 +17,7 @@ const DETAIL_LAYOUT_MAP = {
     still: [TopImg, DetailContents],
 };
 
+
 const DetailPage = () => {
   
     const { id } = useParams();
