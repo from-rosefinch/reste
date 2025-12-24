@@ -3,10 +3,10 @@ import RemoveImg from "../section/detail/RemoveImg";
 import DetailContents from "../section/detail/DetailContents";
 import TopImgDark from "../section/detail/TopImgDark";
 
-const DetailPageDark = () => {
+const DetailPageDark = ({onAdd}) => {
     return (
         <div className="detail-page-dark">
-            <TopImgDark />
+            <TopImgDark onAdd={onAdd}/>
             <RemoveImg />
             <DetailContents />
         </div>

@@ -6,7 +6,9 @@ import CartPage from "./pages/CartPage"
 import DetailPage from "./pages/DetailPage"
 import "../src/assets/scss/global.scss"
 import ScrollToTop from "./components/ScrollToTop";
-
+import { useState } from "react"
+import products from "./assets/data/products.json"
+import DetailPageDark from "./pages/DetailPageDark";
 const App = () => {
   const [cartItems, setCartItems] = useState([]);
 
@@ -74,6 +76,7 @@ const App = () => {
                 onUpdate={handleUpdateQuantity}
                 onDelete={handleDelete}/>} />
           <Route path="/detail/:id" element={<DetailPage onAdd={handleAddCart}/>} />
+          <Route path="/detaildark/:id" element={<DetailPageDark onAdd={handleAddCart}/>} />
         </Route>
       </Routes>
     </BrowserRouter>

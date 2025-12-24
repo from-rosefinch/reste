@@ -18,7 +18,7 @@ const DETAIL_LAYOUT_MAP = {
 };
 
 
-const DetailPage = () => {
+const DetailPage = ({ onAdd }) => {
   
     const { id } = useParams();
 
