@@ -1,5 +1,3 @@
-import React from 'react'
-
 const DetailContent = () => {
   return (
     <section className='detail-contents'>
