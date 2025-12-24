@@ -1,15 +1,16 @@
 import TopImg from "../section/detail/TopImg";
+import TopBgDark from "../section/detail/TopBgDark";
 import RemoveImg from "../section/detail/RemoveImg";
 import DetailContents from "../section/detail/DetailContents";
 import { useParams } from "react-router-dom";
-import products from "../assets/data/products.json";
-import "./Detail.scss";
+import products from "../assets/data/productsdetail.json";
+
 
 const DETAIL_LAYOUT_MAP = {
     cloud: [TopImg, DetailContents],
-    velora: [TopImg, RemoveImg, DetailContents],
-    "retro-current": [TopImg, DetailContents],
-    veil: [TopImg, DetailContents],
+    velora: [TopBgDark,RemoveImg, DetailContents],
+    "retro-current": [TopBgDark, DetailContents],
+    veil: [TopBgDark, DetailContents],
     midnight: [TopImg, RemoveImg, DetailContents],
     "chrome-haven": [TopImg, DetailContents],
     moss: [TopImg, DetailContents],
@@ -19,6 +20,10 @@ const DETAIL_LAYOUT_MAP = {
 const DetailPage = () => {
   
     const { id } = useParams();
+
+    // 1차 방어
+    if (!id) return <div>잘못된 접근임</div>;
+
     const safeId = id.toLowerCase();
 
     const product = products.find(
@@ -27,7 +32,7 @@ const DetailPage = () => {
     );
     
 
-    if (!product) return <div>{id} 페이지 없음</div>;
+    if (!product) return <div>{safeId} 페이지 없음</div>;
 
     const Layout = DETAIL_LAYOUT_MAP[safeId];
     if (!Layout) return <div>페이지 구성 없음</div>;

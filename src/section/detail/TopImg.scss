@@ -34,6 +34,7 @@
 }
 
 .top_img_left {
+  z-index: 10;
   flex: 1;
   min-width: 0;
   @include mixin.flex-layout(row, flex-start, flex-end, 0);
@@ -58,7 +59,7 @@
   line-height: 1;
   letter-spacing: 0.6px;
 }
-.top_img_desc {
+.top_img_desc {      
   @include ko-Body-Large;
   margin: 0;
   font-size: 18px;
@@ -138,4 +139,30 @@
   .btn {
     width: 260px;
   }
+}
+// 배경 이미지 css 지정
+.top_img {
+  position: relative;
+  height: 600px;
+  overflow: hidden;
+}
+
+.top_img_bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+
+.dark_effect {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.top_img_inner {
+  position: relative;
+  z-index: 10;
 }

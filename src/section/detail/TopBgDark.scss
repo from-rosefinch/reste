@@ -1,0 +1,48 @@
+@use "../../assets/scss/mixins" as mixin;
+@use "../../assets/scss/font" as *;
+
+.top_img_dark {
+    background-color: #222;
+}
+
+.top_img_right_dark {
+    // transform: translateX(-50%);
+    color: #fff;
+}
+
+.top_img_desc_dark {
+    margin-top: 2rem;
+    @include ko-Body-Large;
+    font-size: 18px;
+    color: #fff;
+}
+
+.btn_dark {
+    margin-top: 3rem;
+    @include ko-Body-Large;
+    color: #fff;
+    margin: 1rem 0 3rem 0;
+    background-color: #000;
+    width: 260px;
+    height: 56px;
+    font-size: 18px;
+    // btn-style이 border-radius:50%로 되어있어서(원형) 여기서 강제 고정
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+    &:hover {
+        transform: translateY(-1px);
+        background: #e9e9e9;
+        color: #000;
+        box-shadow: 0 6px 6px;
+    }
+}
+.price_dark{
+    @include en-Title;
+    margin: 2rem 0 2rem 0;
+    font-size: 34px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
