@@ -1,11 +1,18 @@
-import React from 'react'
+import "./DetailContents.scss"
 
-const DetailContent = () => {
-  return (
-    <section className='detail-contents'>
-      DetailContent
-    </section>
-  )
-}
+const DetailContent = ({ product }) => {
+    if (!product?.detailPoster) return null;
 
-export default DetailContent
+    return (
+        <section className="detail-contents">
+            <div className="detail-contents_inner poster">
+                <img
+                    src={product.detailPoster}
+                    alt={`${product.title} 상세 이미지`}
+                />
+            </div>
+        </section>
+    );
+};
+
+export default DetailContent;

@@ -5,8 +5,8 @@ import ProductPage from "./pages/ProductPage"
 import CartPage from "./pages/CartPage"
 import DetailPage from "./pages/DetailPage"
 import "../src/assets/scss/global.scss"
-import { useState } from "react"
-import products from "../src/assets/data/products.json";
+import ScrollToTop from "./components/ScrollToTop";
+
 const App = () => {
   const [cartItems, setCartItems] = useState([]);
 
@@ -64,6 +64,7 @@ const App = () => {
   };
   return (
     <BrowserRouter>
+    <ScrollToTop />
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<MainPage onAdd={handleAddCart} />} />
