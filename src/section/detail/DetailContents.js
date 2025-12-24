@@ -1,12 +1,18 @@
-import detailPoster from "../../assets/img/detail_poster_chrome.jpg";
-const DetailContent = () => {
-  return (
-    <section className='detail-contents'>
-      <div className='detail-contents_inner'>
-        <img src={detailPoster} alt='상세이미지' />
-      </div>
-    </section>
-  )
-}
+import "./DetailContents.scss"
 
-export default DetailContent
+const DetailContent = ({ product }) => {
+    if (!product?.detailPoster) return null;
+
+    return (
+        <section className="detail-contents">
+            <div className="detail-contents_inner poster">
+                <img
+                    src={product.detailPoster}
+                    alt={`${product.title} 상세 이미지`}
+                />
+            </div>
+        </section>
+    );
+};
+
+export default DetailContent;
