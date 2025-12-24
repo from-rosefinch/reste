@@ -1,9 +1,9 @@
-import React from 'react'
-
 const DetailContent = () => {
   return (
     <section className='detail-contents'>
-      DetailContent
+      <div className='detail-contents_inner'>
+        <img src={detailPoster} alt='상세이미지' />
+      </div>
     </section>
   )
 }

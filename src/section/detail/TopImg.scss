@@ -7,17 +7,17 @@
   min-height: 50vh;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: 50% 70%;
   overflow: hidden;
-  // 가운데 비네팅(스샷 느낌)
+  // 가운데 비네팅
   &::before {
     content: "";
     position: absolute;
     inset: 0;
     background: radial-gradient(
       circle at 52% 58%,
-      rgba(0, 0, 0, 0.18) 0%,
-      rgba(0, 0, 0, 0.10) 35%,
+      rgba(0, 0, 0, 0.05) 0%,
+      rgba(0, 0, 0, 0.1) 35%,
       rgba(255, 255, 255, 0) 72%
     );
     pointer-events: none;
@@ -35,13 +35,13 @@
 
 .top_img_left {
   flex: 1;
-  min-width: 520px;
+  min-width: 0;
   @include mixin.flex-layout(row, flex-start, flex-end, 0);
   padding-top: 5rem;
   model-viewer {
-    width: 520px;
-    height: 360px;
-    filter: drop-shadow(0 28px 30px rgba(0, 0, 0, 0.22));
+    width: clamp(260px, 40vw, 520px);
+    height: clamp(220px, 30vw, 360px);
+    filter: drop-shadow(0 28px 30px rgba(0, 0, 0, 0.2));
     border-radius: 12px;
   }
 }
@@ -49,7 +49,7 @@
   @include mixin.flex-layout(column, flex-start, flex-start, 0); 
   gap: 1rem;
   transform: translateY(-6px);
-  padding-right: 8rem;
+  padding-right: clamp(0rem, 6vw, 8rem);
 }
 .top_img_title {
   @include en-Display;
@@ -108,6 +108,11 @@
 }
 
 @media (max-width: 768px) {
+  .top_img {
+    min-height: 100svh;
+    background-size: auto;
+    background-position: 50% -40%;
+  }
   .top_img_inner {
     flex-direction: column;
     align-items: center;
