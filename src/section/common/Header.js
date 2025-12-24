@@ -2,6 +2,7 @@ import { RiSofaLine } from "react-icons/ri";
 import { IoSearch } from "react-icons/io5";
 import { FiShoppingCart } from "react-icons/fi";
 import "./Header.scss";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -15,7 +16,7 @@ const Header = () => {
           <IoSearch className="icon-search"/>
         </div>
         <div className="icon-cart">
-          <FiShoppingCart className="icon" />
+          <Link to="/cart"><FiShoppingCart className="icon"/></Link>
         </div>
       </nav>
     </div>

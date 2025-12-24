@@ -1,11 +1,11 @@
 import TopImg from "../section/detail/TopImg";
 import RemoveImg from "../section/detail/RemoveImg";
 import DetailContents from "../section/detail/DetailContents";
-
-const DetailPage = () => {
+const DetailPage = ({ onAdd }) => {
+   
   return (
     <div id="detail-page">
-      <TopImg />
+      <TopImg onAdd={onAdd}/>
       <RemoveImg />
       <DetailContents />
     </div>

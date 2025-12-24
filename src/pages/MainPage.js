@@ -5,12 +5,12 @@ import BrandPR from "../section/main/BrandPR";
 import { IoIosArrowDropdown } from "react-icons/io";
 import DetailPage from "./DetailPage";
 
-const MainPage = () => {
+const MainPage = ({ onAdd }) => {
   return (
     <div id="main-page">
       <IoIosArrowDropdown />
       <MainVideo />
-      <DetailPage />
+      <DetailPage onAdd={onAdd}/>
       <ProductMD />
       <BestItem />
       <BrandPR />
