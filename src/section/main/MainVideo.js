@@ -11,8 +11,14 @@ const MainVideo = () => {
       <div className="video-wrap">
         <video autoPlay muted loop poster={restePoster}>
             <source 
+              src={mobileVideo}
+              media="(max-width:412px)"
+              type="video/webm"
+            />
+            <source 
               src={resteVideo}
-              type="video/webm"/>
+              type="video/webm"
+            />
           </video>
         <img className="logo-img"
           src={resteLogo}

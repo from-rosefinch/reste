@@ -1,8 +1,6 @@
 const CartPopup = () => {
   return (
-    <div className="cart-popup">
-      CartPopup
-    </div>
+    <div>CartPopup</div>
   )
 }
 
