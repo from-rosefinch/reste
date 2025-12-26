@@ -7,14 +7,14 @@ import products from "../assets/data/productsdetail.json";
 
 
 const DETAIL_LAYOUT_MAP = {
-    cloud: [TopImg, DetailContents],
+    cloud: [TopImg,RemoveImg, DetailContents],
     velora: [TopBgDark,RemoveImg, DetailContents],
-    "retro-current": [TopBgDark, DetailContents],
-    veil: [TopBgDark, DetailContents],
+    "retro-current": [TopBgDark,RemoveImg, DetailContents],
+    veil: [TopBgDark,RemoveImg, DetailContents],
     midnight: [TopImg, RemoveImg, DetailContents],
-    "chrome-haven": [TopImg, DetailContents],
-    moss: [TopImg, DetailContents],
-    still: [TopImg, DetailContents],
+    "chrome-haven": [TopImg,RemoveImg, DetailContents],
+    moss: [TopImg,RemoveImg, DetailContents],
+    still: [TopImg,RemoveImg, DetailContents],
 };
 
 

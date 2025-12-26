@@ -28,6 +28,7 @@ $nav-height: 50px;
     transition: 0.3s;
     opacity: 0;
   }
+  
   .container {
     @include flex-layout(column);
     transform: translateY(-60px);

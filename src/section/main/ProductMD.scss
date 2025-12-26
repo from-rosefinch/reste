@@ -26,7 +26,8 @@
         }
       button {
         @include btn-style(var(--color-BK));
-        // min-width: 4rem;
+        border-radius: 2rem;
+        font-size: 1.2rem;
       }
     }
   }

@@ -6,9 +6,15 @@ import CartPage from "./pages/CartPage"
 import DetailPage from "./pages/DetailPage"
 import "../src/assets/scss/global.scss"
 import ScrollToTop from "./components/ScrollToTop";
+<<<<<<< HEAD
 import { useState } from "react"
 import products from "./assets/data/products.json"
 import DetailPageDark from "./pages/DetailPageDark";
+=======
+import { useState } from "react";
+import products from "./assets/data/products.json";
+
+>>>>>>> 2f5bdafc6f67f2b6673b8fd93cc99aa63242a995
 const App = () => {
   const [cartItems, setCartItems] = useState([]);
 
