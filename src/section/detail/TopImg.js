@@ -13,21 +13,32 @@ const TopImg = ({ product, onBuy }) => {
         <section className="top_img">
             {/* 배경 */}
             <div
+                // 배경 이미지
                 className="top_img_bg"
                 style={{
                     backgroundImage: `url(${gradientBg})`,
                 }}
             />
             <div className="top_img_inner">
+                {/* 3D 처리 */}
                 <div className="top_img_left">
                     {model3D && (
-                        <model-viewer
-                            src={model3D}
-                            camera-controls
-                            auto-rotate
-                            disable-zoom
-                            style={{ width: "520px", height: "360px" }}
-                        />
+                        <div className="model-wrap">
+                            <model-viewer
+                                src={model3D}
+                                camera-controls
+                                auto-rotate
+                                disable-zoom
+                                camera-orbit="0deg 60deg 3.2m"
+                                min-camera-orbit="auto 45deg auto"
+                                max-camera-orbit="auto 70deg auto"
+                                camera-target="0m 0.1m 0m"
+                                rotation-center="0m 0.1m 0m"
+                                rotation-axis="y"
+                                environment-image="neutral"
+                                exposure="0.8"
+                            />
+                        </div>
                     )}
                 </div>
 
