@@ -2,7 +2,10 @@ import mdImg from "../../assets/img/Midnight_05.png";
 import "./ProductMD.scss";
 import { Link } from "react-router-dom";
 
-const ProductMD = () => {
+const ProductMD = ({onAdd,item}) => {
+  const handleClick =()=>{
+    onAdd(item);
+  }
   return (
     <section className="product-md">
       <div className="product-description">
@@ -15,7 +18,7 @@ const ProductMD = () => {
             </p>
             <h4>￦ 1,390,000</h4>
             <Link to={`/detail/midnight`}>
-              <button>구매하기</button>
+              <button onClick={handleClick}>구매하기</button>
             </Link>
           </div>
         </div>
