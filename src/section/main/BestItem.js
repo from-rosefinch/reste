@@ -4,17 +4,15 @@ import 'swiper/css';
 import 'swiper/css/free-mode';
 import './BestItem.scss';
 import { Link } from "react-router-dom";
-
 import img1 from "../../assets/img/Veil_01.png";
-import img2 from "../../assets/img/Still_01.png";
+import img2 from "../../assets/img/RETRO_CURRENT_03.png";
 import img3 from "../../assets/img/CHROME_HAVEN_01.png";
 import img4 from "../../assets/img/Cloud_01.png";
 import img5 from "../../assets/img/Velora_01.png";
 import img6 from "../../assets/img/Midnight_05.png";
-
 const slideData = [
   { id: 1, img: img1, title: "Veil"},
-  { id: 2, img: img2, title: "Still"},
+  { id: 2, img: img2, title: "RETRO_CURRENT"},
   { id: 3, img: img3, title: "CHROME_HAVEN"},
   { id: 4, img: img4, title: "Cloud"},
   { id: 5, img: img5, title: "Velora"},
@@ -22,6 +20,7 @@ const slideData = [
 ];
 
 const BestItem = () => {
+
   return (
     <section className="best-item-section">
       {/* 이미지 슬라이드 */}

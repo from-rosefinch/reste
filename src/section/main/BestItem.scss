@@ -6,7 +6,7 @@
   @include ko-Body-Large;
   position: relative;
   width: 100%;
-  background-color: var(--color-BK);
+  background-color: #242321;
   @include flex-layout($just:flex-start);
   overflow: hidden;
 
@@ -51,12 +51,14 @@
   button{
     width: 250px;
     @include btn-style(var(--color-BK));
-    border-radius: 2rem;
     font-size: 1.2rem;
     @include flex-layout();
     position: absolute;
     top: 65%;
     left: 43%;
-  z-index: 10; 
+    z-index: 10;
+  //   &:hover{
+  //     font-weight: 600;
+  //   }
   }
 }
