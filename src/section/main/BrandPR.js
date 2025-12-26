@@ -4,7 +4,7 @@ import "./BrandPR.scss";
 const BrandPR = () => {
   return (
     <section className="brand-pr">
-      <img src={bgImg} alt="bg-imgae" className="pr-bg"/>
+      <img src={bgImg} alt="bg-image" className="pr-bg"/>
     </section>
   )
 }
