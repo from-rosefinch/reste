@@ -5,7 +5,7 @@ import mobilePoster from "../../assets/Reste_mobile_poster.jpg";
 import resteLogo from "../../assets/logo-white.png";
 import "./MainVideo.scss";
 
-const MainVideo = () => {
+const MainVideo = () => {  
   return (
     <section id="main-video">
       <div className="video-wrap">
