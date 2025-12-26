@@ -30,6 +30,7 @@ const TopBgDark = ({ product, onBuy }) => {
                     pointerEvents: "none",
                 }}
             >
+                {/* 배경 이미지 */}
                 <LightRays
                     raysOrigin="top-center"
                     raysColor="#dcdcdc"
@@ -54,6 +55,7 @@ const TopBgDark = ({ product, onBuy }) => {
                     className="top_img_left"
                     style={{ position: "relative", zIndex: 20 }}
                 >
+                    {/* 3D 처리 */}
                     {model3D && (
                         <model-viewer
                             src={model3D}
@@ -63,6 +65,9 @@ const TopBgDark = ({ product, onBuy }) => {
                             exposure="1.4"
                             environment-image="neutral"
                             shadow-intensity="1"
+                            camera-orbit="0deg 60deg auto"
+                            min-camera-orbit="auto 45deg auto"
+                            max-camera-orbit="auto 70deg auto"
                             style={{ width: "520px", height: "360px" }}
                         />
                     )}
