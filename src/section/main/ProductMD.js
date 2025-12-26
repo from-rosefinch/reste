@@ -1,12 +1,11 @@
 import mdImg from "../../assets/img/Midnight_05.png";
 import "./ProductMD.scss";
 import { Link } from "react-router-dom";
-import { useEffect, useRef, useState } from "react";
-
-const ProductMD = ({item,onAdd}) => {
-  const sectionRef = useRef(null);
+import products from "../../assets/data/products.json"
+import { useRef, useState, useEffect } from "react";
+const ProductMD = ({onAdd}) => {
+const sectionRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -16,19 +15,15 @@ const ProductMD = ({item,onAdd}) => {
       },
       { threshold: 0.4 }
     );
-
     if (sectionRef.current) observer.observe(sectionRef.current);
     return () => observer.disconnect();
   }, []);
-
-const ProductMD = ({onAdd}) => {
   const handleClick =()=>{
-    onAdd();
+    onAdd(products);
   }
   return (
     <section className={`product-md ${isVisible ? "is-visible" : ""}`}
-      ref={sectionRef}
-    >
+      ref={sectionRef}>
       <div className="product-description">
         <div className="product-detail">
           <img src={mdImg} alt="미드나잇 소파" />
@@ -39,7 +34,7 @@ const ProductMD = ({onAdd}) => {
             </p>
             <h4>￦ 1,390,000</h4>
             <Link to={`/detail/midnight`}>
-              <button>구매하기</button>
+              <button onClick={handleClick}>구매하기</button>
             </Link>
           </div>
         </div>
@@ -47,5 +42,4 @@ const ProductMD = ({onAdd}) => {
     </section>
   );
 };
-
 export default ProductMD;
