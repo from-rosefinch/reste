@@ -7,7 +7,7 @@ const DetailContent = ({ product }) => {
         <section className="detail-contents">
             <div className="detail-contents_inner poster">
                 <img
-                    src={product.detailPoster}
+                    src={`process.env.PUBILC_URL/${product.detailPoster}`}
                     alt={`${product.title} 상세 이미지`}
                 />
             </div>

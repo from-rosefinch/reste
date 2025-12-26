@@ -66,11 +66,11 @@ const RemoveImg = ({ product }) => {
           {detailCuts.map((it) => (
             <article className="detail_card" key={it.id} role="listitem">
               <div className="detail_card_media">
-                <img className="img_base" src={it.base} alt={it.alt || ""} />
+                <img className="img_base" src={`process.env.PUBILC_URL/${it.base}`} alt={it.alt || ""} />
                 {it.hover && (
                   <img
                     className="img_hover"
-                    src={it.hover}
+                    src={`process.env.PUBILC_URL/${it.hover}`}
                     alt=""
                     aria-hidden="true"
                   />
