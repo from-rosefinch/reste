@@ -17,6 +17,9 @@
       margin: auto;
       width: 600px; // 필요에 맞게
     //   pointer-events: none;
+    @include mobile{
+      width: 300px;
+    }
     }
   }
 }

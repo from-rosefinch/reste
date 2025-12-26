@@ -4,7 +4,7 @@ const TopImgDark = ({ product }) => {
     if (!product) return null;
 
     const { model3D } = product; 
-
+      
     return (
         <section
             className="top_img dark"

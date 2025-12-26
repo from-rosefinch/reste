@@ -1,13 +1,23 @@
 import LightRays from "./LightRays";
 import "./TopBgDark.scss";
-
-const TopBgDark = ({ product, onBuy }) => {
+import { useState } from "react";
+import CartPopup from "../../components/CartPopup";
+const TopBgDark = ({ product, onAdd }) => {
+    const[isOpen,setIsOpen] = useState(false);
     if (!product) return null;
-
     const { title, price, description, model3D } = product;
     const formattedPrice = new Intl.NumberFormat("ko-KR").format(price ?? 0);
     const descLines = (description ?? "").split("\n");
 
+    const handlePayClick = () => {
+        
+        setIsOpen(true);
+    };
+    const handleClose = () => setIsOpen(false);
+    const handleClick = () => {
+        onAdd?.(product);
+        handlePayClick();
+                };
     return (
         <section
             className="top_img_dark"
@@ -30,6 +40,7 @@ const TopBgDark = ({ product, onBuy }) => {
                     pointerEvents: "none",
                 }}
             >
+                {/* 배경 이미지 */}
                 <LightRays
                     raysOrigin="top-center"
                     raysColor="#dcdcdc"
@@ -54,6 +65,7 @@ const TopBgDark = ({ product, onBuy }) => {
                     className="top_img_left"
                     style={{ position: "relative", zIndex: 20 }}
                 >
+                    {/* 3D 처리 */}
                     {model3D && (
                         <model-viewer
                             src={model3D}
@@ -63,6 +75,9 @@ const TopBgDark = ({ product, onBuy }) => {
                             exposure="1.4"
                             environment-image="neutral"
                             shadow-intensity="1"
+                            camera-orbit="0deg 60deg auto"
+                            min-camera-orbit="auto 45deg auto"
+                            max-camera-orbit="auto 70deg auto"
                             style={{ width: "520px", height: "360px" }}
                         />
                     )}
@@ -87,12 +102,15 @@ const TopBgDark = ({ product, onBuy }) => {
 
                     <button
                         className="btn_dark"
-                        onClick={() => onBuy?.(product)}
+                        onClick={handleClick}
                     >
                         구매하기
                     </button>
                 </div>
             </div>
+              { isOpen &&(
+                        <CartPopup onClose={handleClose}/>
+                )}
         </section>
     );
 };

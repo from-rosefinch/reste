@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom"
+import { BrowserRouter, HashRouter, Route, Routes } from "react-router-dom"
 import Layout from "./layout/Layout"
 import MainPage from "./pages/MainPage"
 import ProductPage from "./pages/ProductPage"
@@ -6,12 +6,13 @@ import CartPage from "./pages/CartPage"
 import DetailPage from "./pages/DetailPage"
 import "../src/assets/scss/global.scss"
 import ScrollToTop from "./components/ScrollToTop";
+import DetailPageDark from "./pages/DetailPageDark";
 import { useState } from "react";
 import products from "./assets/data/products.json";
-
 const App = () => {
   const [cartItems, setCartItems] = useState([]);
-
+ 
+  
   const handleAddCart = (Productdetail) =>{
 
     const base = products.find((p) => p.id === Productdetail.id);
@@ -40,6 +41,7 @@ const App = () => {
     }
     return [...prev, { ...cartProduct, quantity: 1 }];
   });
+  
 };
   const handleUpdateQuantity = (id, type) => {
     setCartItems((prev) => {
@@ -65,7 +67,8 @@ const App = () => {
     setCartItems((prev) => prev.filter((item) => item.id !== id));
   };
   return (
-    <BrowserRouter>
+    // <BrowserRouter>
+    <HashRouter>
     <ScrollToTop />
       <Routes>
         <Route element={<Layout />}>
@@ -76,9 +79,11 @@ const App = () => {
                 onUpdate={handleUpdateQuantity}
                 onDelete={handleDelete}/>} />
           <Route path="/detail/:id" element={<DetailPage onAdd={handleAddCart}/>} />
+          <Route path="/detaildark/:id" element={<DetailPageDark onAdd={handleAddCart}/>} />
         </Route>
       </Routes>
-    </BrowserRouter>
+      </HashRouter>
+    // </BrowserRouter>
   )
 }
 

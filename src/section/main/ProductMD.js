@@ -35,7 +35,7 @@ const ProductMD = () => {
             </p>
             <h4>￦ 1,390,000</h4>
             <Link to={`/detail/midnight`}>
-              <button>구매하기</button>
+              <button onClick={handleClick}>구매하기</button>
             </Link>
           </div>
         </div>
