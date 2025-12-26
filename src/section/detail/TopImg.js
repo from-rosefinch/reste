@@ -40,7 +40,7 @@ const TopImg = ({ product ,onAdd }) => {
                 <div className="top_img_left">
                     {model3D && (
                         <model-viewer
-                        src={model3D}
+                        src={`process.env.PUBILC_URL/${model3D}`}
                         camera-controls
                         auto-rotate
                         disable-zoom

@@ -40,7 +40,7 @@ const TopImgDark = ({ product }) => {
             >
                 {model3D && (
                     <model-viewer
-                        src={model3D}
+                        src={`process.env.PUBILC_URL/${model3D}`}
                         camera-controls
                         auto-rotate
                         disable-zoom
