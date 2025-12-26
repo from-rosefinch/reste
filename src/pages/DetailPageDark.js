@@ -1,4 +1,3 @@
-import React from "react";
 import RemoveImg from "../section/detail/RemoveImg";
 import DetailContents from "../section/detail/DetailContents";
 import TopImgDark from "../section/detail/TopImgDark";

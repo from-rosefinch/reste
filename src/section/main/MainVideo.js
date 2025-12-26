@@ -5,14 +5,20 @@ import mobilePoster from "../../assets/Reste_mobile_poster.jpg";
 import resteLogo from "../../assets/logo-white.png";
 import "./MainVideo.scss";
 
-const MainVideo = () => {
+const MainVideo = () => {  
   return (
     <section id="main-video">
       <div className="video-wrap">
         <video autoPlay muted loop poster={restePoster}>
             <source 
+              src={mobileVideo}
+              media="(max-width:412px)"
+              type="video/webm"
+            />
+            <source 
               src={resteVideo}
-              type="video/webm"/>
+              type="video/webm"
+            />
           </video>
         <img className="logo-img"
           src={resteLogo}

@@ -1,13 +1,14 @@
 @use "../assets/scss/font" as *;
 
-
-
-
 /* 카드 그리드 정렬 */
 .product-card {
     margin-top: 8rem;
     display: grid;
     grid-template-columns: repeat(3, 400px);
+    // 반응형 처리
+    @media (max-width: 768px) {
+        grid-template-columns: repeat(2, 200px);
+    }
     gap: 24px;
     justify-content: center;
 }
@@ -21,6 +22,11 @@
     overflow: hidden;
     cursor: pointer;
     background-color: #fff;
+    @media (max-width: 768px) {
+        width: 200px;
+        height: 280px;
+        border-radius: 1rem;
+    }
 }
 
 /* 이미지 2장 겹치기 */
@@ -51,17 +57,13 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0),
-        rgb(75, 75, 75)
-    );
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(75, 75, 75));
     z-index: 1;
 }
 
 /* 텍스트 */
 .inner-card .info {
-    @include en-Body-Large;
+    font-family: "Lora";
     font-weight: 400;
     position: absolute;
     left: 20px;
@@ -72,4 +74,19 @@
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
+// 텍스트 반응형
+@media (max-width: 768px) {
+    .main_txt{
+        transform: translateY(-30px)
+    }
+    .product-card{
+        transform: translateY(-60px)
+    }
+    .inner-card .info {
+        transform: translateY(0);
+    }
 
+    .inner-card .info .price {
+        @include en-Body-Medium;
+    }
+}

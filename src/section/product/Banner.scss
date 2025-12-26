@@ -1,5 +1,5 @@
 @use "../../assets/scss/font" as *;
-
+@use "../../assets/scss/mixins" as *;
 
 .banner {
     width: 100%;
@@ -21,7 +21,6 @@
     flex-shrink: 0;
     object-fit: cover;
 }
-
 
 .image-wrap-bottom {
     position: absolute;
@@ -52,4 +51,31 @@
     font-size: 48px;
     text-align: center;
     z-index: 2;
+}
+
+// 반응형
+
+@media (max-width: 768px) {
+    .txt {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+    }
+    .banner {
+        height: 80vh;
+    }
+    .image-wrap-bottom {
+        position: absolute;
+        top: 62%;
+        left: 50%;
+    }
+    .image-wrap-bottom img {
+        width: 80px;
+        height: 80px;
+        border-radius: 6px;
+    }
+
+    .image-wrap-bottom {
+        gap: 8px;
+    }
 }
