@@ -1,12 +1,10 @@
 import LightRays from "./LightRays";
 
-const TopImgDark = ({ product, onAdd, item }) => {
+const TopImgDark = ({ product }) => {
     if (!product) return null;
 
     const { model3D } = product; 
-      const handleClick = ()=>{
-        onAdd(item);
-  }
+      
     return (
         <section
             className="top_img dark"

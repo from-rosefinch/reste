@@ -13,7 +13,7 @@ const TopImg = ({ product ,onAdd }) => {
     const formattedPrice = new Intl.NumberFormat("ko-KR").format(price ?? 0);
     const descLines = (description ?? "").split("\n");
     const handlePayClick = () => {
-        // if (isEmpty) return;
+        
         setIsOpen(true);
     };
     const handleClose = () => setIsOpen(false);
@@ -39,7 +39,6 @@ const TopImg = ({ product ,onAdd }) => {
                 {/* 3D 처리 */}
                 <div className="top_img_left">
                     {model3D && (
-<<<<<<< HEAD
                         <model-viewer
                         src={model3D}
                         camera-controls
@@ -47,24 +46,6 @@ const TopImg = ({ product ,onAdd }) => {
                         disable-zoom
                         style={{ width: "520px", height: "360px" }}
                         />
-=======
-                        <div className="model-wrap">
-                            <model-viewer
-                                src={model3D}
-                                camera-controls
-                                auto-rotate
-                                disable-zoom
-                                camera-orbit="0deg 60deg 3.2m"
-                                min-camera-orbit="auto 45deg auto"
-                                max-camera-orbit="auto 70deg auto"
-                                camera-target="0m 0.1m 0m"
-                                rotation-center="0m 0.1m 0m"
-                                rotation-axis="y"
-                                environment-image="neutral"
-                                exposure="0.8"
-                            />
-                        </div>
->>>>>>> c49c6e277fd6d8c0895313e670edc7baa5998469
                     )}
                 </div>
 
