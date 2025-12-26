@@ -3,7 +3,7 @@ import "./ProductMD.scss";
 import { Link } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 
-const ProductMD = () => {
+const ProductMD = ({item,onAdd}) => {
   const sectionRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -35,7 +35,7 @@ const ProductMD = () => {
             </p>
             <h4>￦ 1,390,000</h4>
             <Link to={`/detail/midnight`}>
-              <button onClick={handleClick}>구매하기</button>
+              <button>구매하기</button>
             </Link>
           </div>
         </div>
