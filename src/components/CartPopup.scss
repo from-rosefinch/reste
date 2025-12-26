@@ -1,6 +1,7 @@
 @use '../assets/scss/variables.scss';
 @use '../assets/scss/font.scss' ;
 @use '../assets/scss/mixins.scss' as *;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
     .cart-popup-overlay{
     width: 100%;
     height: 100%;
@@ -21,16 +22,16 @@
     display: block;
     justify-content: center;
     align-items: center;
-    gap: 5rem;
+    gap: 3rem;
     width: 400px;
-    height: 30vh;
+    height: 25vh;
     padding: 3rem 1rem;
     text-align: center;
     border: 0.8px solid rgba(255,255,255,0.24);
-    border-radius: 40px;
+    border-radius: 8px;
     background-color: rgba(255,255,255,0.44);
     backdrop-filter: saturate(100%) blur(5px);
-    box-shadow: 0 6px 6px rgba(0,0,0,0.15);
+    box-shadow: 0 6px 6px rgba(177,177,177,0.49);
     @include font.en-Body-Large();
     @include desktop{
         width: 600px;
@@ -38,7 +39,7 @@
     }
     .btn{
         background: none;
-        height: 15vh;
+        height: 10vh;
         gap: 30px;
         border-radius: none;
         display: inline-flex;
@@ -54,11 +55,11 @@
             cursor: pointer;
             background-color: var(--color-main);
             backdrop-filter: saturate(100%),blur(1px);
-            padding: 1.3rem 1rem ;
+            padding: 1rem 1.5rem ;
             border: 0.3px solid rgba(241, 238, 185, 0.15);
-            border-radius: 20px;
+            border-radius: 50px;
             box-shadow: 0 4px 4px solid rgba(255,255,255,0.44);
-            @include font.ko-Body-Medium();
+            margin-bottom: 11px;
             transition: 0.5s;
             &:hover{
                 background: none;
@@ -73,3 +74,9 @@
     }
     
     }
+    .name-txt, .btn {
+  font-family: "Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;
+  font-weight:300;
+  font-style: normal;
+}

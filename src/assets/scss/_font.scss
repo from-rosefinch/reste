@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
-
+@import url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Light.woff2') format('woff2');
 @font-face {
   font-family: "Arita Buri KR SemiBold";
   src: url("../fonts/AritaBuriKR-SemiBold.ttf") format("truetype");
@@ -96,4 +96,12 @@
   font-family: "Arita Buri KR Medium";
   font-weight: 500;
   font-size: 16px;
+}
+
+@mixin cart-font{
+  
+    font-family: 'Pretendard';
+    font-weight: 300;
+    font-display: swap;
+
 }
