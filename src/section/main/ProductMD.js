@@ -2,9 +2,9 @@ import mdImg from "../../assets/img/Midnight_05.png";
 import "./ProductMD.scss";
 import { Link } from "react-router-dom";
 
-const ProductMD = ({onAdd,item}) => {
+const ProductMD = ({onAdd}) => {
   const handleClick =()=>{
-    onAdd(item);
+    onAdd();
   }
   return (
     <section className="product-md">
