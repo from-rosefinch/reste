@@ -47,6 +47,9 @@ $nav-height: 50px;
 
       // header의 nav는 마우스가 통과되지 않도록 설정
       pointer-events: auto; 
+      @include mobile{
+        width: 350px;
+      }
 
       .icon-sofa {
         width: 100px;
@@ -60,7 +63,9 @@ $nav-height: 50px;
           color: var(--color-100);
           transition: 0.3s;
         }
-
+        @include mobile{
+          width: 50px;
+         }
         // sofa 아이콘 hover 했을 때 변경사항
         &:hover {
           background-color: var(--color-100);
@@ -75,7 +80,7 @@ $nav-height: 50px;
         width: 250px;
         height: 35px;
         background-color: rgba( 255, 255, 255, 0.3 );
-
+    
         border-radius: 17.5px;
         @include flex-layout();
         transition: 0.3s;
@@ -108,7 +113,9 @@ $nav-height: 50px;
           font-size: 1.2rem;
           color: var(--color-100);
         }
-
+        @include mobile{
+          width: 50px;
+         }
         // cart 아이콘에 hover 시 변경사항
         &:hover {
           background-color: var(--color-100);
