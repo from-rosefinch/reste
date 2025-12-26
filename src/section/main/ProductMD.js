@@ -21,6 +21,10 @@ const ProductMD = ({item,onAdd}) => {
     return () => observer.disconnect();
   }, []);
 
+const ProductMD = ({onAdd}) => {
+  const handleClick =()=>{
+    onAdd();
+  }
   return (
     <section className={`product-md ${isVisible ? "is-visible" : ""}`}
       ref={sectionRef}
