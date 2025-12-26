@@ -1,8 +1,15 @@
 // 반응형 breakpoints
 $desktop : 1024px;
+$mobile : 412px;
 
-@mixin desktop{
+@mixin desktop {
   @media all and (min-width: $desktop) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media all and (min-width: $mobile) {
     @content;
   }
 }

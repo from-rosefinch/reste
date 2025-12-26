@@ -3,7 +3,7 @@ import ProductMD from "../section/main/ProductMD";
 import BestItem from "../section/main/BestItem";
 import BrandPR from "../section/main/BrandPR";
 
-const MainPage = () => {
+const MainPage = ({ onAdd }) => {
   return (
     <div id="main-page" >
       <MainVideo />
