@@ -1,13 +1,23 @@
 import LightRays from "./LightRays";
 import "./TopBgDark.scss";
-
-const TopBgDark = ({ product, onBuy }) => {
+import { useState } from "react";
+import CartPopup from "../../components/CartPopup";
+const TopBgDark = ({ product, onAdd }) => {
+    const[isOpen,setIsOpen] = useState(false);
     if (!product) return null;
-
     const { title, price, description, model3D } = product;
     const formattedPrice = new Intl.NumberFormat("ko-KR").format(price ?? 0);
     const descLines = (description ?? "").split("\n");
 
+    const handlePayClick = () => {
+        
+        setIsOpen(true);
+    };
+    const handleClose = () => setIsOpen(false);
+    const handleClick = () => {
+        onAdd?.(product);
+        handlePayClick();
+                };
     return (
         <section
             className="top_img_dark"
@@ -92,12 +102,15 @@ const TopBgDark = ({ product, onBuy }) => {
 
                     <button
                         className="btn_dark"
-                        onClick={() => onBuy?.(product)}
+                        onClick={handleClick}
                     >
                         구매하기
                     </button>
                 </div>
             </div>
+              { isOpen &&(
+                        <CartPopup onClose={handleClose}/>
+                )}
         </section>
     );
 };

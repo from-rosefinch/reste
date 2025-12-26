@@ -6,12 +6,13 @@ import CartPage from "./pages/CartPage"
 import DetailPage from "./pages/DetailPage"
 import "../src/assets/scss/global.scss"
 import ScrollToTop from "./components/ScrollToTop";
+import DetailPageDark from "./pages/DetailPageDark";
 import { useState } from "react";
 import products from "./assets/data/products.json";
-
 const App = () => {
   const [cartItems, setCartItems] = useState([]);
-
+ 
+  
   const handleAddCart = (Productdetail) =>{
 
     const base = products.find((p) => p.id === Productdetail.id);
@@ -40,6 +41,7 @@ const App = () => {
     }
     return [...prev, { ...cartProduct, quantity: 1 }];
   });
+  
 };
   const handleUpdateQuantity = (id, type) => {
     setCartItems((prev) => {
@@ -77,6 +79,7 @@ const App = () => {
                 onUpdate={handleUpdateQuantity}
                 onDelete={handleDelete}/>} />
           <Route path="/detail/:id" element={<DetailPage onAdd={handleAddCart}/>} />
+          <Route path="/detaildark/:id" element={<DetailPageDark onAdd={handleAddCart}/>} />
         </Route>
       </Routes>
       </HashRouter>
