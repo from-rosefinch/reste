@@ -3,9 +3,9 @@ import CartContents from "../section/cart/CartContents";
 import "./cart.scss";
 
 
-const CartPage = ({cartItems,onUpdate,onDelete}) => {
+const CartPage = ({cartItems,onUpdate,onDelete,onPay}) => {
   
-
+  
   const [totalPrice, setTotalPrice] = useState(0);
   useEffect(() => {
 
@@ -15,6 +15,12 @@ const CartPage = ({cartItems,onUpdate,onDelete}) => {
 
     setTotalPrice(total);
   }, [cartItems]);
+  const isEmpty = cartItems.length === 0;
+
+  const handlePay = () => {
+    if (isEmpty) return; // 로직 방어 (필수)
+    onPay?.(cartItems, totalPrice); // 결제 함수가 있으면 실행
+  };
   return (
     <div id="cart-page">
       <div className="top">
@@ -28,7 +34,9 @@ const CartPage = ({cartItems,onUpdate,onDelete}) => {
           <span>￦ {Number(totalPrice).toLocaleString()}</span> 
           <span>Total</span>
         </div>
-        <button>결제하기</button>
+        <button className={`pay-btn ${isEmpty ? "disabled" : ""}`}
+                disabled={isEmpty}
+                onClick={handlePay}> 결제하기</button>
       </div>
     </div>
   )

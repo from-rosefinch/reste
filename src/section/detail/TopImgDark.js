@@ -1,11 +1,11 @@
 import LightRays from "./LightRays";
 
-const TopImgDark = ({ product, onAdd }) => {
+const TopImgDark = ({ product, onAdd, item }) => {
     if (!product) return null;
 
     const { model3D } = product; 
       const handleClick = ()=>{
-    onAdd(item);
+        onAdd(item);
   }
     return (
         <section
