@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom"
+import { BrowserRouter, HashRouter, Route, Routes } from "react-router-dom"
 import Layout from "./layout/Layout"
 import MainPage from "./pages/MainPage"
 import ProductPage from "./pages/ProductPage"
@@ -65,7 +65,8 @@ const App = () => {
     setCartItems((prev) => prev.filter((item) => item.id !== id));
   };
   return (
-    <BrowserRouter>
+    // <BrowserRouter>
+    <HashRouter>
     <ScrollToTop />
       <Routes>
         <Route element={<Layout />}>
@@ -78,7 +79,8 @@ const App = () => {
           <Route path="/detail/:id" element={<DetailPage onAdd={handleAddCart}/>} />
         </Route>
       </Routes>
-    </BrowserRouter>
+      </HashRouter>
+    // </BrowserRouter>
   )
 }
 
